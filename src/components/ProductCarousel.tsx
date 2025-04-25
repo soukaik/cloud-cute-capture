@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -14,30 +13,30 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "Kumo Cloud Pink",
-    color: "Soft Pink",
+    name: "Kumo Cloud Rosa",
+    color: "Rosa Suave",
     bgColor: "bg-kumo-pink",
-    price: "$49.99",
+    price: "R$ 249,99",
   },
   {
     id: 2,
-    name: "Kumo Cloud White",
-    color: "Pure White",
+    name: "Kumo Cloud Branco",
+    color: "Branco Puro",
     bgColor: "bg-white",
-    price: "$49.99",
+    price: "R$ 249,99",
   },
   {
     id: 3,
-    name: "Kumo Cloud Black",
-    color: "Sleek Black",
+    name: "Kumo Cloud Preto",
+    color: "Preto Elegante",
     bgColor: "bg-kumo-black",
-    price: "$49.99",
+    price: "R$ 249,99",
   }
 ];
 
 export const ProductCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedColor, setSelectedColor] = useState("Soft Pink");
+  const [selectedColor, setSelectedColor] = useState("Rosa Suave");
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
@@ -58,7 +57,7 @@ export const ProductCarousel: React.FC = () => {
   return (
     <section id="products" className="py-12 px-4">
       <div className="max-w-md mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Find Your Perfect Cloud</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Encontre Seu Pijama Perfeito</h2>
         
         <div className="relative">
           <div className="overflow-hidden rounded-xl" ref={carouselRef}>
@@ -72,7 +71,7 @@ export const ProductCarousel: React.FC = () => {
                     className={`aspect-[3/4] ${product.bgColor} rounded-xl flex items-center justify-center shadow-md`}
                   >
                     {/* Replace with actual product image */}
-                    <p className={`text-center px-4 ${product.color === "Sleek Black" ? "text-white" : "text-gray-600"}`}>
+                    <p className={`text-center px-4 ${product.color === "Preto Elegante" ? "text-white" : "text-gray-600"}`}>
                       [Product Image: Model wearing {product.color} Kumo Cloud pajama set]
                     </p>
                   </div>
@@ -98,22 +97,21 @@ export const ProductCarousel: React.FC = () => {
           </button>
         </div>
         
-        {/* Color Selection */}
         <div className="flex justify-center mt-6 space-x-4">
           <button 
             onClick={() => selectColor(0)} 
-            className={`w-12 h-12 rounded-full bg-kumo-pink border-2 transition-all ${selectedColor === "Soft Pink" ? "border-black scale-110" : "border-transparent"}`}
-            aria-label="Pink color"
+            className={`w-12 h-12 rounded-full bg-kumo-pink border-2 transition-all ${selectedColor === "Rosa Suave" ? "border-black scale-110" : "border-transparent"}`}
+            aria-label="Rosa Suave color"
           ></button>
           <button 
             onClick={() => selectColor(1)} 
-            className={`w-12 h-12 rounded-full bg-white border-2 shadow-sm transition-all ${selectedColor === "Pure White" ? "border-black scale-110" : "border-transparent"}`}
-            aria-label="White color"
+            className={`w-12 h-12 rounded-full bg-white border-2 shadow-sm transition-all ${selectedColor === "Branco Puro" ? "border-black scale-110" : "border-transparent"}`}
+            aria-label="Branco Puro color"
           ></button>
           <button 
             onClick={() => selectColor(2)} 
-            className={`w-12 h-12 rounded-full bg-kumo-black border-2 transition-all ${selectedColor === "Sleek Black" ? "border-gray-400 scale-110" : "border-transparent"}`}
-            aria-label="Black color"
+            className={`w-12 h-12 rounded-full bg-kumo-black border-2 transition-all ${selectedColor === "Preto Elegante" ? "border-gray-400 scale-110" : "border-transparent"}`}
+            aria-label="Preto Elegante color"
           ></button>
         </div>
         
@@ -124,7 +122,7 @@ export const ProductCarousel: React.FC = () => {
           
           <div className="mt-6">
             <Button className="w-full bg-kumo-dark-pink hover:bg-kumo-black text-white py-6 rounded-full text-lg shadow-md">
-              Add to Cart
+              Adicionar ao Carrinho
             </Button>
           </div>
         </div>

@@ -7,9 +7,9 @@ export const SocialProofSection: React.FC = () => {
     <section className="bg-kumo-light-pink py-10 px-4">
       <div className="max-w-md mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-semibold mb-3 text-gray-900">Why Kumo Lovers Can't Get Enough</h2>
+          <h2 className="text-2xl font-semibold mb-3 text-gray-900">Por que os Amantes da Kumo Não Conseguem Parar</h2>
           <p className="text-gray-700">
-            Because your loungewear should be as adorable as it is comfortable.
+            Porque seu pijama deve ser tão adorável quanto confortável.
           </p>
         </div>
 
@@ -19,9 +19,9 @@ export const SocialProofSection: React.FC = () => {
               <Star key={index} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <p className="text-center text-lg font-medium mb-1">4.9 Stars (1,243+ Reviews)</p>
+          <p className="text-center text-lg font-medium mb-1">4.9 Estrelas (Mais de 1.243 Avaliações)</p>
           <p className="text-center italic text-gray-600">
-            "Literally the softest PJs ever! I feel like I'm floating on a cloud every night! 😍"
+            "Literalmente o pijama mais macio que já usei! Me sinto flutuando em uma nuvem toda noite! 😍"
           </p>
           <p className="text-center mt-2 font-medium">- Mika T.</p>
         </div>
